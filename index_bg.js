@@ -5,7 +5,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB, 360, 100, 100, 100);
   background(255, 255, 255);
-  for (let i = 128512; i < 128512 + 55; i++) {
+  for (let i = 128512; i < 128512 + 80; i++) {
     let emoji = String.fromCodePoint(i);
     emojiStrArr.push(emoji);
   }
@@ -18,7 +18,10 @@ function draw() {
   // All the emojis
   for (var i = 0; i < emojis.length; i++) {
     var c = emojis[i];
-    c.display();
+    if (c.x != width / 2 && c.y != height/2)
+    {
+      c.display();
+    }
 
     if (c.alive) {
       c.update();

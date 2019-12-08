@@ -21,7 +21,7 @@
         <!-- p5.touchgui -->
   <!--      <script src="https://unpkg.com/p5.touchgui@0.5.2/lib/p5.touchgui.js"></script>-->
         <!-- independent js file-->
-        <!--<script src="javascripts.js"></script>-->
+        <script src="javascripts.js"></script>
         <!--<script {% block script %}{% endblock %} ></script>-->
         <!--title -->
         <title>emüji</title>
@@ -30,7 +30,71 @@
   <!--      <link rel="stylesheet" type="text/css" href="/static/css/default.css" />-->
 		<!--<link rel="stylesheet" type="text/css" href="/static/css/component.css" />-->
     </head>
-    <body>
+    <body style="background-color:#FFC83D;">
+        <script>
+            var x = document.getElementById("myAudio");
+
+            function playAudio() {
+              x.play();
+              console.log("musicplay");
+            }
+
+            function pauseAudio() {
+              x.pause();
+              console.log("musicpause");
+            }
+        </script>
+        <div style="padding:30px 30px;width:50%;height:100%;background-color:white;position:absolute;right:50%;transform:translate(50%,0%);">
+            <div>
+                <!--<form class="form-inline my-2 my-lg-0" style="position:absolute;right:50%;transform:translate(50%,0%);">-->
+                <!--    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+                <!--    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+                <!--</form>-->
+                <div class="row" style="color:#FFC83D;text-align:center;">
+                    <div class="col-2">
+                        <p>Emoji</p>
+                        <div>
+                            <audio id="myAudio">
+                                <source src="test.mp3" type="audio/mpeg">
+                            </audio>
+                            <button type="button" class="btn btn-light" style="margin:2px 2px;"  onclick="playAudio()" onmouseleave="pauseAudio()">&#x1F600;</button>
+                        </div>
+                        <div><button type="button" class="btn btn-light" style="margin:2px 2px;">&#x1F600;</button></div>
+                        <div><button type="button" class="btn btn-light" style="margin:2px 2px;">&#x1F600;</button></div>
+                        <div><button type="button" class="btn btn-light" style="margin:2px 2px;">&#x1F600;</button></div>
+                        <div><button type="button" class="btn btn-light" style="margin:2px 2px;">&#x1F600;</button></div>
+                        <div><button type="button" class="btn btn-light" style="margin:2px 2px;">&#x1F600;</button></div>
+                    </div>
+                    <div class="col-4">
+                        <p>Title</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Artist</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                        <p style="margin:20px 2px;">XXXXXXXXXX</p>
+                    </div>
+                    <div class="col-2">
+                        <p>Share</p>
+                        <button type="button" class="btn btn-warning" style="margin:2px 2px;">Share</button>
+                        <button type="button" class="btn btn-warning" style="margin:2px 2px;">Share</button>
+                        <button type="button" class="btn btn-warning" style="margin:2px 2px;">Share</button>
+                        <button type="button" class="btn btn-warning" style="margin:2px 2px;">Share</button>
+                        <button type="button" class="btn btn-warning" style="margin:2px 2px;">Share</button>
+                        <button type="button" class="btn btn-warning" style="margin:2px 2px;">Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
